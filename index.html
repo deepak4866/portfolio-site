@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f8f8f8;
+            color: #333;
         }
 
         header {
@@ -31,10 +32,12 @@
 
         h1 {
             color: #333;
+            margin-bottom: 0.5rem;
         }
 
         p {
             color: #555;
+            line-height: 1.5;
         }
 
         .skills {
@@ -45,6 +48,10 @@
 
         .skills div {
             text-align: center;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f8f8f8;
         }
 
         footer {
@@ -55,6 +62,69 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Portfolio Styling */
+        .portfolio {
+            margin-top: 2rem;
+        }
+
+        .project {
+            margin-bottom: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project-details {
+            padding: 1rem;
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .project p {
+            color: #777;
+        }
+
+        .project a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 0.5rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .project a:hover {
+            color: #555;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fadeIn {
+            animation: fadeIn 1s ease-in-out;
         }
     </style>
 </head>
@@ -81,6 +151,30 @@
             <div>
                 <h3>CSS</h3>
                 <p>Proficient</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h2>Portfolio</h2>
+
+        <div class="project fadeIn">
+            <img src="placeholder_image1.jpg" alt="Project 1">
+            <div class="project-details">
+                <h3>CSS Animation Showcase</h3>
+                <p>A collection of CSS animations and transitions.</p>
+                <a href="#" target="_blank">Demo</a> |
+                <a href="#" target="_blank">Source Code</a>
+            </div>
+        </div>
+
+        <div class="project fadeIn" style="animation-delay: 0.5s;">
+            <img src="placeholder_image2.jpg" alt="Project 2">
+            <div class="project-details">
+                <h3>Responsive Navigation</h3>
+                <p>A responsive navigation bar with CSS transitions.</p>
+                <a href="#" target="_blank">Demo</a> |
+                <a href="#" target="_blank">Source Code</a>
             </div>
         </div>
     </section>
